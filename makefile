@@ -10,5 +10,8 @@ Equipe.o: Equipe.c Equipe.h Match.h
 Match.o: Match.c Match.h Equipe.h
 	gcc -Wall -g -c Match.c
 
+run: main_top14_etu.exe
+	.\main_top14_etu.exe
+
 clean:
-	del *.o main_top14_etu
+	del /F /Q *.o main_top14_etu.exe 2>nul
