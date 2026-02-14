@@ -1,4 +1,5 @@
 #include "Equipe.h"
+#include <stdio.h>
 
 
 void affiche_equipe(const Equipe *eq){
