@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-# define MaxL 5 /* Taille maximale d'une matrice en nombre de lignes */
-# define MaxC 6 /* Taille maximale d'une matrice en nombre de colonnes */
-# define V 21  /* Nombre aléatoire */
+# define MaxL 250 /* Taille maximale d'une matrice en nombre de lignes */
+# define MaxC 250 /* Taille maximale d'une matrice en nombre de colonnes */
+# define V 1000  /* Nombre aléatoire */
 
 /* Exemple de fonction pour une matrice statique de taille nxm */
 void afficher_matrice (int M[MaxL][MaxC]);
@@ -100,6 +100,11 @@ int main()
   srand(time(NULL));
   int M[MaxL][MaxC];
   int choice;
+
+  clock_t temps_initial ; /* Temps initial en micro-secondes */
+  clock_t temps_final ; /* Temps final en micro-secondes */
+  double temps_cpu ; /* Temps total en secondes */
+
   remplir_matrice(M);
   
   afficher_matrice(M);
@@ -112,12 +117,18 @@ int main()
   switch (choice)
   {
   case 1:
+    temps_initial = clock();
     afficher_nb_frequent_1(M);
+    temps_final = clock();
     break;
-  case 2:
+    case 2:
+    temps_initial = clock();
     afficher_nb_frequent_2(M);
+    temps_final = clock();
     break;
   }
   
+  temps_cpu = (( double )( temps_final - temps_initial ))/ CLOCKS_PER_SEC;
+  printf ("Temps cpu de la fonction %d : %f \n", choice, temps_cpu);
   return 0;
 }

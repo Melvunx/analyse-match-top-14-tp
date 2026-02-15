@@ -1,8 +1,8 @@
-Toulon 
-Stade_Francais 
-Lyon 
-Castres 
-Bordeaux 
+Toulon
+Stade_Francais
+Lyon
+Castres
+Bordeaux
 Toulouse
 Montpellier
 Vannes

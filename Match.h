@@ -18,6 +18,9 @@ typedef struct{
    sous la forme "Toulon 10 - 15 Toulouse" */
 void affiche_match(Match m);
 
+// Affiche les données de tous les matchs
+void afficher_tous_les_matchs(Match Tmacth[], int n);
+
 /* Calcule les statistiques de victoire, nul, défaites et bonus 
    des équipes à partir du tableau Tmatch des n matchs */
 void analyse_matchs(Match Tmatch[], int n);

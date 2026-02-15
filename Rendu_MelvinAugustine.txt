@@ -1,0 +1,2 @@
+Question 1.4
+En générant une matrice comportant 250 lignes de 250 colonnes, le premier algorithme met plus de 2 secondes pour trouver le résultat alors que le deuxième algorythme s'exécute bien plus rapidement en quelque nano seconde.

@@ -5,7 +5,16 @@
 
 /* Affiche les donnés d'un match dont les données sont passées par copie*/
 void affiche_match(Match m){
-    printf("%s %d - %d %s\n", m.eq_hote->nom,m.score_hote,m.score_invite,m.eq_invite->nom);
+    printf("\n%6s %2d - %2d %s\n", m.eq_hote->nom,m.score_hote,m.score_invite,m.eq_invite->nom);
+}
+
+void afficher_tous_les_matchs(Match Tmatch[], int n)
+{
+  printf("\n\n=============================| Affichage des matchs |=============================\n\n");
+    for (int i = 0; i < n; i++)
+        affiche_match(Tmatch[i]);
+  printf("\n\n==================================================================================\n\n");
+    
 }
 
 /* Calcule les statistiques de victoire, nul, défaites et bonus

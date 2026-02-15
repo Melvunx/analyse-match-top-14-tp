@@ -16,6 +16,9 @@ typedef struct {
    sous la forme "Racing 15 pts (G: N: P: B:)" */
 void affiche_equipe(const Equipe *eq);
 
+// Afficher toutes les équipes
+void afficher_toutes_les_equipes(Equipe Teq[], int n);
+
 /* Renvoie un pointeur sur une équipe sotckée dans le tableau Teq de n cases
    et qui a le nom passé en paramètre */
 Equipe* rech_ptr_equipe(Equipe Teq[], int n, char nom[]);
