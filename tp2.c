@@ -71,23 +71,23 @@ void afficher_nb_frequent_1(int M[MaxL][MaxC])
 }
 
 void afficher_nb_frequent_2(int M[MaxL][MaxC]){
-  int Tcompoteur[V] = {0};
+  int Tcompteur[V] = {0};
   int number, index;
-  int max = Tcompoteur[0];
+  int max = Tcompteur[0];
 
   for (int i = 0; i < MaxL; i++)
   {
     for (int j = 0; j < MaxC; j++)
     {
       number = M[i][j];
-      Tcompoteur[number]++;
+      Tcompteur[number]++;
     }
   }
   
   for (int k = 0; k < V; k++)
   {
-    if (max < Tcompoteur[k]) {
-      max = Tcompoteur[k];
+    if (max < Tcompteur[k]) {
+      max = Tcompteur[k];
       index = k;
     }
   }
